@@ -750,7 +750,6 @@
 
     .line 90
     :cond_1
-    invoke-direct {p0}, Lcom/spiraltoys/cloudpets2/AdultDashboardActivity;->setupAds()V
 
     .line 94
     return-void

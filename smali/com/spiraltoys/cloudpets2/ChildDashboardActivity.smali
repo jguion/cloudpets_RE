@@ -1442,9 +1442,6 @@
 
     iput-object v2, p0, Lcom/spiraltoys/cloudpets2/ChildDashboardActivity;->mConnectionManager:Lcom/spiraltoys/cloudpets2/toy/ToyConnectionManager;
 
-    .line 210
-    invoke-direct {p0}, Lcom/spiraltoys/cloudpets2/ChildDashboardActivity;->setupAds()V
-
     .line 212
     return-void
 
