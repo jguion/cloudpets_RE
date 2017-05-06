@@ -1,0 +1,515 @@
+.class public Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;
+.super Landroid/databinding/ViewDataBinding;
+.source "FragmentChildDashboardDialogBinding.java"
+
+
+# static fields
+.field private static final sIncludes:Landroid/databinding/ViewDataBinding$IncludedLayouts;
+
+.field private static final sViewsWithIds:Landroid/util/SparseIntArray;
+
+
+# instance fields
+.field public final contentContainer:Landroid/widget/FrameLayout;
+
+.field private mDirtyFlags:J
+
+.field public final mainContent:Landroid/widget/RelativeLayout;
+
+.field private final mboundView0:Landroid/widget/RelativeLayout;
+
+.field public final toolbar:Landroid/support/v7/widget/Toolbar;
+
+.field public final toolbarCloud:Landroid/widget/ImageView;
+
+.field public final toolbarTitle:Landroid/widget/TextView;
+
+.field public final toolbarTitleIcon:Landroid/widget/ImageView;
+
+.field public final toolbarWrapper:Landroid/widget/LinearLayout;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    .prologue
+    .line 10
+    const/4 v0, 0x0
+
+    sput-object v0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->sIncludes:Landroid/databinding/ViewDataBinding$IncludedLayouts;
+
+    .line 11
+    new-instance v0, Landroid/util/SparseIntArray;
+
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+
+    sput-object v0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->sViewsWithIds:Landroid/util/SparseIntArray;
+
+    .line 12
+    sget-object v0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->sViewsWithIds:Landroid/util/SparseIntArray;
+
+    const v1, 0x7f1000eb
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 13
+    sget-object v0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->sViewsWithIds:Landroid/util/SparseIntArray;
+
+    const v1, 0x7f1000ec
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 14
+    sget-object v0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->sViewsWithIds:Landroid/util/SparseIntArray;
+
+    const v1, 0x7f1000ed
+
+    const/4 v2, 0x3
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 15
+    sget-object v0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->sViewsWithIds:Landroid/util/SparseIntArray;
+
+    const v1, 0x7f10008e
+
+    const/4 v2, 0x4
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 16
+    sget-object v0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->sViewsWithIds:Landroid/util/SparseIntArray;
+
+    const v1, 0x7f1000d0
+
+    const/4 v2, 0x5
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 17
+    sget-object v0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->sViewsWithIds:Landroid/util/SparseIntArray;
+
+    const v1, 0x7f1000ee
+
+    const/4 v2, 0x6
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 18
+    sget-object v0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->sViewsWithIds:Landroid/util/SparseIntArray;
+
+    const v1, 0x7f1000ef
+
+    const/4 v2, 0x7
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 19
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 5
+    .param p1, "root"    # Landroid/view/View;
+
+    .prologue
+    const/4 v4, 0x0
+
+    .line 34
+    invoke-direct {p0, p1, v4}, Landroid/databinding/ViewDataBinding;-><init>(Landroid/view/View;I)V
+
+    .line 95
+    const-wide/16 v2, -0x1
+
+    iput-wide v2, p0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->mDirtyFlags:J
+
+    .line 35
+    const/16 v1, 0x8
+
+    sget-object v2, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->sIncludes:Landroid/databinding/ViewDataBinding$IncludedLayouts;
+
+    sget-object v3, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->sViewsWithIds:Landroid/util/SparseIntArray;
+
+    invoke-static {p1, v1, v2, v3}, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->mapBindings(Landroid/view/View;ILandroid/databinding/ViewDataBinding$IncludedLayouts;Landroid/util/SparseIntArray;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 36
+    .local v0, "bindings":[Ljava/lang/Object;
+    const/4 v1, 0x5
+
+    aget-object v1, v0, v1
+
+    check-cast v1, Landroid/widget/FrameLayout;
+
+    iput-object v1, p0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->contentContainer:Landroid/widget/FrameLayout;
+
+    .line 37
+    const/4 v1, 0x2
+
+    aget-object v1, v0, v1
+
+    check-cast v1, Landroid/widget/RelativeLayout;
+
+    iput-object v1, p0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->mainContent:Landroid/widget/RelativeLayout;
+
+    .line 38
+    aget-object v1, v0, v4
+
+    check-cast v1, Landroid/widget/RelativeLayout;
+
+    iput-object v1, p0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->mboundView0:Landroid/widget/RelativeLayout;
+
+    .line 39
+    iget-object v1, p0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->mboundView0:Landroid/widget/RelativeLayout;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->setTag(Ljava/lang/Object;)V
+
+    .line 40
+    const/4 v1, 0x4
+
+    aget-object v1, v0, v1
+
+    check-cast v1, Landroid/support/v7/widget/Toolbar;
+
+    iput-object v1, p0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->toolbar:Landroid/support/v7/widget/Toolbar;
+
+    .line 41
+    const/4 v1, 0x1
+
+    aget-object v1, v0, v1
+
+    check-cast v1, Landroid/widget/ImageView;
+
+    iput-object v1, p0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->toolbarCloud:Landroid/widget/ImageView;
+
+    .line 42
+    const/4 v1, 0x6
+
+    aget-object v1, v0, v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    iput-object v1, p0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->toolbarTitle:Landroid/widget/TextView;
+
+    .line 43
+    const/4 v1, 0x7
+
+    aget-object v1, v0, v1
+
+    check-cast v1, Landroid/widget/ImageView;
+
+    iput-object v1, p0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->toolbarTitleIcon:Landroid/widget/ImageView;
+
+    .line 44
+    const/4 v1, 0x3
+
+    aget-object v1, v0, v1
+
+    check-cast v1, Landroid/widget/LinearLayout;
+
+    iput-object v1, p0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->toolbarWrapper:Landroid/widget/LinearLayout;
+
+    .line 45
+    invoke-virtual {p0, p1}, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->setRootTag(Landroid/view/View;)V
+
+    .line 46
+    invoke-virtual {p0}, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->invalidateAll()V
+
+    .line 47
+    return-void
+.end method
+
+.method public static bind(Landroid/view/View;)Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;
+    .locals 3
+    .param p0, "view"    # Landroid/view/View;
+
+    .prologue
+    .line 104
+    const-string v0, "layout/fragment_child_dashboard_dialog_0"
+
+    invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 105
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "view tag isn\'t correct on view:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 107
+    :cond_0
+    new-instance v0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;
+
+    invoke-direct {v0, p0}, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;-><init>(Landroid/view/View;)V
+
+    return-object v0
+.end method
+
+.method public static inflate(Landroid/view/LayoutInflater;)Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;
+    .locals 3
+    .param p0, "inflater"    # Landroid/view/LayoutInflater;
+
+    .prologue
+    .line 101
+    const v0, 0x7f04003e
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->bind(Landroid/view/View;)Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static inflate(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;
+    .locals 1
+    .param p0, "inflater"    # Landroid/view/LayoutInflater;
+    .param p1, "root"    # Landroid/view/ViewGroup;
+    .param p2, "attachToRoot"    # Z
+
+    .prologue
+    .line 98
+    const v0, 0x7f04003e
+
+    invoke-static {p0, v0, p1, p2}, Landroid/databinding/DataBindingUtil;->inflate(Landroid/view/LayoutInflater;ILandroid/view/ViewGroup;Z)Landroid/databinding/ViewDataBinding;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;
+
+    return-object v0
+.end method
+
+.method private log(Ljava/lang/String;J)V
+    .locals 4
+    .param p1, "msg"    # Ljava/lang/String;
+    .param p2, "i"    # J
+
+    .prologue
+    .line 68
+    const-string v0, "BINDER"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ":"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-static {p2, p3}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 69
+    return-void
+.end method
+
+
+# virtual methods
+.method protected executeBindings()V
+    .locals 4
+
+    .prologue
+    .line 86
+    const-wide/16 v0, 0x0
+
+    .line 87
+    .local v0, "dirtyFlags":J
+    monitor-enter p0
+
+    .line 88
+    :try_start_0
+    iget-wide v0, p0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->mDirtyFlags:J
+
+    .line 89
+    const-wide/16 v2, 0x0
+
+    iput-wide v2, p0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->mDirtyFlags:J
+
+    .line 90
+    monitor-exit p0
+
+    .line 92
+    return-void
+
+    .line 90
+    :catchall_0
+    move-exception v2
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v2
+.end method
+
+.method public hasPendingBindings()Z
+    .locals 4
+
+    .prologue
+    .line 59
+    monitor-enter p0
+
+    .line 60
+    :try_start_0
+    iget-wide v0, p0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->mDirtyFlags:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    .line 61
+    const/4 v0, 0x1
+
+    monitor-exit p0
+
+    .line 64
+    :goto_0
+    return v0
+
+    .line 63
+    :cond_0
+    monitor-exit p0
+
+    .line 64
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 63
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public invalidateAll()V
+    .locals 2
+
+    .prologue
+    .line 51
+    monitor-enter p0
+
+    .line 52
+    const-wide/16 v0, 0x1
+
+    :try_start_0
+    iput-wide v0, p0, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->mDirtyFlags:J
+
+    .line 53
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 54
+    invoke-virtual {p0}, Lcom/spiraltoys/cloudpets2/databinding/FragmentChildDashboardDialogBinding;->requestRebind()V
+
+    .line 55
+    return-void
+
+    .line 53
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method protected onFieldChange(ILjava/lang/Object;I)Z
+    .locals 1
+    .param p1, "localFieldId"    # I
+    .param p2, "object"    # Ljava/lang/Object;
+    .param p3, "fieldId"    # I
+
+    .prologue
+    .line 79
+    .line 81
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public setVariable(ILjava/lang/Object;)Z
+    .locals 1
+    .param p1, "variableId"    # I
+    .param p2, "variable"    # Ljava/lang/Object;
+
+    .prologue
+    .line 72
+    .line 74
+    const/4 v0, 0x0
+
+    return v0
+.end method
