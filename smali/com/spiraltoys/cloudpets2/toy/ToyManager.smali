@@ -212,12 +212,14 @@
 .end method
 
 .method public static sendAudioToToyAndBlinkLed(Landroid/net/Uri;Lcom/spiraltoys/cloudpets2/toy/ToyAudioSlot;)Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandIdentifier;
-    .locals 4
+    .locals 10
     .param p0, "localAudioUri"    # Landroid/net/Uri;
     .param p1, "slot"    # Lcom/spiraltoys/cloudpets2/toy/ToyAudioSlot;
 
     .prologue
     const/4 v2, 0x1
+    const-wide v6, 0x406fe00000000000L    # 255.0
+
 
     .line 111
     new-instance v0, Ljava/util/ArrayList;
@@ -258,6 +260,37 @@
     invoke-direct {v1, v2, v3}, Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandSetLedState;-><init>(Lcom/spiraltoys/cloudpets2/toy/ToyLedState;I)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+
+    const-wide v8, 0x42c8000000000000L
+
+    new-instance v1, Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandSetSpeakerVolume;
+
+    mul-double v4, v8, v6
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->floor(D)D
+
+    move-result-wide v4
+
+    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->min(DD)D
+
+    move-result-wide v4
+
+    double-to-int v4, v4
+
+    int-to-byte v4, v4
+
+    invoke-direct {v1, v4}, Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandSetSpeakerVolume;-><init>(B)V
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const v9, false
+    new-instance v1, Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandTriggerSlotPlayback;
+
+    invoke-direct {v1, p1, v9}, Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandTriggerSlotPlayback;-><init>(Lcom/spiraltoys/cloudpets2/toy/ToyAudioSlot;Z)V
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
 
     .line 118
     new-instance v1, Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandStartCommandSequence;

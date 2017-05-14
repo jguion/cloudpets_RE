@@ -19,6 +19,6 @@
     <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
     <include layout="@layout/widget_onboarding_progress" />
     <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <Button android:enabled="false" android:id="@id/complete_connection_button" android:background="@drawable/button_primary" android:layout_width="0.0dip" android:layout_height="64.0dip" android:text="@string/btn_done" android:layout_weight="1.0" style="@style/BorderlessButtonStyle" />
+        <Button android:enabled="true" android:id="@id/complete_connection_button" android:background="@drawable/button_primary" android:layout_width="0.0dip" android:layout_height="64.0dip" android:text="@string/btn_done" android:layout_weight="1.0" style="@style/BorderlessButtonStyle" />
     </LinearLayout>
 </LinearLayout>
