@@ -2760,7 +2760,7 @@
 .end method
 
 .method onShowMessagesClicked()V
-    .locals 1
+    .locals 2
     .annotation build Lbutterknife/OnClick;
         value = {
             0x7f10007e
@@ -2769,24 +2769,12 @@
 
     .prologue
     .line 323
-    iget-object v0, p0, Lcom/spiraltoys/cloudpets2/ChildDashboardActivity;->mChildDashboardDialogFragment:Lcom/spiraltoys/cloudpets2/fragments/ChildDashboardDialogFragment;
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lcom/spiraltoys/cloudpets2/ChildDashboardActivity;->mChildDashboardDialogFragment:Lcom/spiraltoys/cloudpets2/fragments/ChildDashboardDialogFragment;
+    invoke-static {v0, v1}, Lcom/spiraltoys/cloudpets2/toy/ToyManager;->startLoopPlayback(SI)Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandIdentifier;
 
-    invoke-virtual {v0}, Lcom/spiraltoys/cloudpets2/fragments/ChildDashboardDialogFragment;->isAdded()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 324
-    :cond_0
-    invoke-direct {p0}, Lcom/spiraltoys/cloudpets2/ChildDashboardActivity;->showVoiceMessagesDialog()V
-
-    .line 326
-    :cond_1
     return-void
 .end method
 

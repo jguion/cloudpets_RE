@@ -71,15 +71,65 @@
 .end method
 
 .method public newTask(Landroid/content/Context;Lcom/spiraltoys/cloudpets2/toy/ToyPeripheral;)Lcom/spiraltoys/cloudpets2/toy/task/ToyTask;
-    .locals 1
+    .locals 4
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "peripheral"    # Lcom/spiraltoys/cloudpets2/toy/ToyPeripheral;
 
     .prologue
     .line 37
-    new-instance v0, Lcom/spiraltoys/cloudpets2/toy/task/ToyTaskStartLoopPlayback;
 
-    invoke-direct {v0, p2, p0}, Lcom/spiraltoys/cloudpets2/toy/task/ToyTaskStartLoopPlayback;-><init>(Lcom/spiraltoys/cloudpets2/toy/ToyPeripheral;Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandStartLoopPlayback;)V
+    new-instance v1, Lcom/spiraltoys/cloudpets2/toy/task/ToyTaskReceiveAudio;
 
-    return-object v0
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    sget-object v3, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, "toy_recordings"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    sget-object v3, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ".wmv"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, p2, v2}, Lcom/spiraltoys/cloudpets2/toy/task/ToyTaskReceiveAudio;-><init>(Lcom/spiraltoys/cloudpets2/toy/ToyPeripheral;Ljava/lang/String;)V
+
+    return-object v1
+
 .end method
