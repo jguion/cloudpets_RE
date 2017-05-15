@@ -2701,66 +2701,31 @@
 .end method
 
 .method onShowGamesClicked()V
-    .locals 3
+    .locals 0
     .annotation build Lbutterknife/OnClick;
         value = {
             0x7f100096
         }
     .end annotation
 
-    .prologue
-    .line 346
-    invoke-static {}, Lcom/spiraltoys/cloudpets2/fragments/PremiumDialogFragment;->newInstance()Lcom/spiraltoys/cloudpets2/fragments/PremiumDialogFragment;
-
-    move-result-object v0
-
-    .line 347
-    .local v0, "premiumDialogFragment":Lcom/spiraltoys/cloudpets2/fragments/PremiumDialogFragment;
-    invoke-direct {p0}, Lcom/spiraltoys/cloudpets2/ChildDashboardActivity;->getDialogFragmentTransaction()Landroid/app/FragmentTransaction;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lcom/spiraltoys/cloudpets2/fragments/PremiumDialogFragment;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
-
-    .line 349
+    invoke-static {}, Lcom/spiraltoys/cloudpets2/toy/ToyManager;->startRecorder()Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandIdentifier;
     return-void
 .end method
 
 .method onShowLullabiesClicked()V
-    .locals 1
+    .locals 0
     .annotation build Lbutterknife/OnClick;
         value = {
             0x7f10009b
         }
     .end annotation
 
-    .prologue
-    .line 330
-    iget-object v0, p0, Lcom/spiraltoys/cloudpets2/ChildDashboardActivity;->mChildDashboardDialogFragment:Lcom/spiraltoys/cloudpets2/fragments/ChildDashboardDialogFragment;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/spiraltoys/cloudpets2/ChildDashboardActivity;->mChildDashboardDialogFragment:Lcom/spiraltoys/cloudpets2/fragments/ChildDashboardDialogFragment;
-
-    invoke-virtual {v0}, Lcom/spiraltoys/cloudpets2/fragments/ChildDashboardDialogFragment;->isAdded()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 331
-    :cond_0
-    invoke-direct {p0}, Lcom/spiraltoys/cloudpets2/ChildDashboardActivity;->showLullabiesDialog()V
-
-    .line 333
-    :cond_1
+    invoke-static {}, Lcom/spiraltoys/cloudpets2/toy/ToyManager;->startRecorder()Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandIdentifier;
     return-void
 .end method
 
 .method onShowMessagesClicked()V
-    .locals 2
+    .locals 1
     .annotation build Lbutterknife/OnClick;
         value = {
             0x7f10007e
@@ -2769,25 +2734,6 @@
 
     .prologue
     .line 323
-
-    const/4 v0, 0x0
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/spiraltoys/cloudpets2/toy/ToyManager;->startLoopPlayback(SI)Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandIdentifier;
-
-    return-void
-.end method
-
-.method public onShowStoriesClicked()V
-    .locals 1
-    .annotation build Lbutterknife/OnClick;
-        value = {
-            0x7f100099
-        }
-    .end annotation
-
-    .prologue
-    .line 353
     iget-object v0, p0, Lcom/spiraltoys/cloudpets2/ChildDashboardActivity;->mChildDashboardDialogFragment:Lcom/spiraltoys/cloudpets2/fragments/ChildDashboardDialogFragment;
 
     if-eqz v0, :cond_0
@@ -2800,12 +2746,27 @@
 
     if-nez v0, :cond_1
 
-    .line 354
+    .line 324
     :cond_0
-    invoke-direct {p0}, Lcom/spiraltoys/cloudpets2/ChildDashboardActivity;->showStoriesDialog()V
+    invoke-direct {p0}, Lcom/spiraltoys/cloudpets2/ChildDashboardActivity;->showVoiceMessagesDialog()V
 
-    .line 356
+    .line 326
     :cond_1
+    return-void
+.end method
+
+.method public onShowStoriesClicked()V
+    .locals 2
+    .annotation build Lbutterknife/OnClick;
+        value = {
+            0x7f100099
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/spiraltoys/cloudpets2/toy/ToyManager;->startLoopPlayback(SI)Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandIdentifier;
     return-void
 .end method
 

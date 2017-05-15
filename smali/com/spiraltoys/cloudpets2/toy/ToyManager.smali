@@ -489,6 +489,43 @@
     return-object v0
 .end method
 
+.method public static startRecorder()Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandIdentifier;
+    .locals 4
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .local v0, "commandSequence":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/spiraltoys/cloudpets2/toy/command/ToyCommand;>;"
+
+    new-instance v1, Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandSetLedState;
+
+    sget-object v2, Lcom/spiraltoys/cloudpets2/toy/ToyLedState;->BLINKING:Lcom/spiraltoys/cloudpets2/toy/ToyLedState;
+
+    const/16 v3, 0x1f4
+
+    invoke-direct {v1, v2, v3}, Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandSetLedState;-><init>(Lcom/spiraltoys/cloudpets2/toy/ToyLedState;I)V
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandRecord;
+
+    invoke-direct {v1}, Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandRecord;-><init>()V
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandStartCommandSequence;
+
+    invoke-direct {v1, v0}, Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandStartCommandSequence;-><init>(Ljava/util/ArrayList;)V
+
+    invoke-static {v1}, Lcom/spiraltoys/cloudpets2/toy/ToyManager;->postToyCommand(Lcom/spiraltoys/cloudpets2/toy/command/ToyCommand;)Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandIdentifier;
+
+    move-result-object v1
+
+    return-object v1
+.end method
+
+
 .method public static startLullaby(Landroid/content/Context;Landroid/net/Uri;DJ)Lcom/spiraltoys/cloudpets2/toy/command/ToyCommandIdentifier;
     .locals 6
     .param p0, "context"    # Landroid/content/Context;
